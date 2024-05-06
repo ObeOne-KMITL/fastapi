@@ -12,7 +12,7 @@ def hello_world():
 
 @app.get("/result/{score}")
 async def result_exam(score):
-   // score = int(score)
+    score = int(score)
     if(score >= 50):
         result = "Pass"
     else:    

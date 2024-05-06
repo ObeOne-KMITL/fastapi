@@ -28,6 +28,17 @@ async def bmi(weight: float, height: float):
     
 # เวลาเรียกใช้  .../bmi?weight=55&height=165
 
+
+@app.get("/add")
+async def add(a: int, b: int):
+    return {"sum": a+b}
+
+
+@app.get("/mul")
+async def mul(a, b):
+    return int(a) * int(b)
+
+
 if __name__ == '__main__':
     import uvicorn
     uvicorn.run(app)

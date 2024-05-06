@@ -1,1 +1,1 @@
-pip freeze > requirements.txt
+fastapi==0.95.0

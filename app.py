@@ -12,7 +12,7 @@ def hello_world():
 
 @app.get("/result/{score}")
 async def result_exam(score):
-    score = int(score)
+   // score = int(score)
     if(score >= 50):
         result = "Pass"
     else:    
@@ -25,7 +25,8 @@ async def bmi(weight: float, height: float):
     bmi = weight/(height/100)**2
     
     return str(bmi)
-
+    
+// เวลาเรียกใช้  .../bmi?weight=55&height=165
 
 if __name__ == '__main__':
     import uvicorn

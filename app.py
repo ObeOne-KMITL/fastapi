@@ -26,7 +26,7 @@ async def bmi(weight: float, height: float):
     
     return str(bmi)
     
-// เวลาเรียกใช้  .../bmi?weight=55&height=165
+# เวลาเรียกใช้  .../bmi?weight=55&height=165
 
 if __name__ == '__main__':
     import uvicorn

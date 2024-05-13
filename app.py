@@ -1,14 +1,22 @@
 #app.py
 
-from fastapi import FastAPI
+from fastapi import FastAPI, Form, Request
+from fastapi.responses import HTMLResponse
 
 app = FastAPI()
+
+
 
 
 @app.get('/')
 def hello_world():
     
     return {"message": "Hello,World"}
+
+
+@app.get('/formget.html', response_class=HTMLResponse)
+def main(request: Request):
+    return templates.TemplateResponse('formget.html.html', {'request': request})
 
 @app.get("/result/{score}")
 async def result_exam(score):

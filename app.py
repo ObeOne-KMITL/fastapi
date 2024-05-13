@@ -16,7 +16,7 @@ def hello_world():
 
 @app.get('/formget.html', response_class=HTMLResponse)
 def main(request: Request):
-    return templates.TemplateResponse('formget.html.html', {'request': request})
+    return templates.TemplateResponse('formget.html', {'request': request})
 
 @app.get("/result/{score}")
 async def result_exam(score):

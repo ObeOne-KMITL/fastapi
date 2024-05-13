@@ -7,7 +7,7 @@ from fastapi.templating import Jinja2Templates
 app = FastAPI()
 templates = Jinja2Templates(directory='.')
 
-
+#แก้ default folder จาก template เป็น ไม่มี
 
 @app.get('/')
 def hello_world():
